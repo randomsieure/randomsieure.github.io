@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANDOMSIEURE.SHOP - Bán Acc Game Giá Rẻ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #0a0e27;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(0, 243, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255, 0, 255, 0.1) 0%, transparent 50%);
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Rainbow Border Animation */
+        @keyframes rainbow {
+            0% { border-color: #ff0000; filter: drop-shadow(0 0 10px #ff0000); }
+            14% { border-color: #ff7f00; filter: drop-shadow(0 0 10px #ff7f00); }
+            28% { border-color: #ffff00; filter: drop-shadow(0 0 10px #ffff00); }
+            42% { border-color: #00ff00; filter: drop-shadow(0 0 10px #00ff00); }
+            57% { border-color: #0000ff; filter: drop-shadow(0 0 10px #0000ff); }
+            71% { border-color: #4b0082; filter: drop-shadow(0 0 10px #4b0082); }
+            85% { border-color: #9400d3; filter: drop-shadow(0 0 10px #9400d3); }
+            100% { border-color: #ff0000; filter: drop-shadow(0 0 10px #ff0000); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Header */
+        header {
+            padding: 30px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, transparent 100%);
+        }
+
+        .logo-wrapper {
+            display: inline-block;
+            padding: 10px;
+            border: 3px solid #ff0000;
+            border-radius: 50%;
+            animation: rainbow 3s linear infinite, float 3s ease-in-out infinite;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 15px 0 10px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #00f3ff, #ff00ff, #00ff00, #00f3ff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient 3s linear infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .slogan {
+            font-size: 1em;
+            color: #ffd700;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+            margin-top: 5px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(255, 0, 102, 0.2), rgba(51, 0, 255, 0.2));
+            border: 3px solid #ff0000;
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: rainbow 4s linear infinite, pulse 2s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .price-box {
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 30px;
+            border-radius: 15px;
+            margin: 10px 0;
+            border: 2px solid #ffd700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .price-label {
+            font-size: 1.2em;
+            color: #00f3ff;
+            margin-bottom: 5px;
+        }
+
+        .price-value {
+            font-size: 2.5em;
+            font-weight: 900;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 1);
+            line-height: 1;
+        }
+
+        /* Games Grid */
+        .games-section {
+            margin: 30px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #00f3ff;
+            text-shadow: 0 0 20px rgba(0, 243, 255, 0.8);
+            font-weight: bold;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .game-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 2px solid #ff0000;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+            animation: rainbow 5s linear infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .game-card::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(0, 243, 255, 0.3), transparent);
+            transform: translate(-50%, -50%);
+            transition: width 0.4s, height 0.4s;
+            border-radius: 50%;
+        }
+
+        .game-card:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .game-card:hover {
+            transform: translateY(-15px) scale(1.05);
+        }
+
+        .game-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .game-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #00f3ff;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px solid #ff0000;
+            border-radius: 15px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            animation: rainbow 6s linear infinite;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .feature-title {
+            font-size: 1.3em;
+            color: #ffd700;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .feature-desc {
+            font-size: 0.95em;
+            color: #ddd;
+            line-height: 1.5;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #00f3ff, #ff00ff);
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            margin: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 10px 40px rgba(0, 243, 255, 0.5);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-btn:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 50px rgba(255, 0, 255, 0.7);
+        }
+
+        .cta-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 3px solid #ff0000;
+            animation: rainbow 5s linear infinite;
+        }
+
+        .footer-brand {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #00f3ff;
+            margin-bottom: 10px;
+        }
+
+        .footer-desc {
+            font-size: 1em;
+            color: #ddd;
+            margin: 10px 0;
+        }
+
+        .founder {
+            font-size: 1.1em;
+            color: #ffd700;
+            font-weight: bold;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        .copyright {
+            margin-top: 15px;
+            opacity: 0.7;
+            font-size: 0.9em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.5em; }
+            .logo { width: 100px; height: 100px; }
+            .price-value { font-size: 2em; }
+            .section-title { font-size: 1.4em; }
+            .cta-btn { font-size: 1em; padding: 12px 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles"></div>
+    
+    <div class="content-wrapper">
+        <header>
+            <div class="logo-wrapper">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAOY_npEwfcs9t0IR2J5VN7pYHR0Kv-wV0jA&s" alt="Logo" class="logo">
+            </div>
+            <h1>RANDOMSIEURE.SHOP</h1>
+            <p class="slogan">⚡ BÁN ACC GAME RANDOM - UY TÍN #1 VIỆT NAM ⚡</p>
+        </header>
+
+        <div class="container">
+            <section class="hero">
+                <div class="hero-content">
+                    <h2 style="font-size: 1.8em; margin-bottom: 15px; color: #fff;">🎉 SIÊU KHUYẾN MÃI 🎉</h2>
+                    <p style="font-size: 1.1em; margin-bottom: 15px; color: #00f3ff;">Random Acc Game - Cơ Hội Nổ Acc VIP Cực Cao!</p>
+                    <div class="price-box">
+                        <div class="price-label">GIÁ CHỈ TỪ</div>
+                        <div class="price-value">1.000đ</div>
+                    </div>
+                    <p style="font-size: 1.1em; margin-top: 15px; color: #ffd700;">🔥 Acc VIP - Tướng Hiếm - Skin Đẹp 🔥</p>
+                </div>
+            </section>
+
+            <section class="games-section">
+                <h2 class="section-title">🎮 GAME HỖ TRỢ 🎮</h2>
+                <div class="games-grid">
+                    <div class="game-card">
+                        <div class="game-icon">⚔️</div>
+                        <div class="game-name">LIÊN QUÂN MOBILE</div>
+                        <p style="color: #ddd; font-size: 0.95em;">Acc ngẫu nhiên với tướng, skin hiếm</p>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-icon">🔫</div>
+                        <div class="game-name">FREE FIRE</div>
+                        <p style="color: #ddd; font-size: 0.95em;">Random acc súng, skin, pet độc đáo</p>
+                    </div>
+                    <div class="game-card">
+                        <div class="game-icon">🎲</div>
+                        <div class="game-name">ROBLOX</div>
+                        <p style="color: #ddd; font-size: 0.95em;">Acc Robux, item giá trị bất ngờ</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section" style="background: rgba(255, 255, 255, 0.03); border: 2px solid #ff0000; border-radius: 20px; padding: 30px 20px; margin: 30px 0; animation: rainbow 5s linear infinite; backdrop-filter: blur(10px);">
+                <h2 class="section-title">📖 VỀ CHÚNG TÔI 📖</h2>
+                <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                    <p style="font-size: 1em; line-height: 1.6; color: #ddd; margin-bottom: 15px;">
+                        🎯 <strong style="color: #00f3ff;">RANDOMSIEURE.SHOP</strong> được thành lập vào ngày <strong style="color: #ffd700;">02/05/2025</strong>, 
+                        với sứ mệnh mang đến cho game thủ Việt Nam cơ hội sở hữu acc game chất lượng với mức giá siêu rẻ chỉ từ <strong style="color: #ff00ff;">1.000đ</strong>!
+                    </p>
+                    <p style="font-size: 1em; line-height: 1.6; color: #ddd; margin-bottom: 15px;">
+                        🏆 Sau hơn <strong style="color: #ffd700;">6 tháng</strong> hoạt động, chúng tôi tự hào là <strong style="color: #00f3ff;">Shop Bán Acc Random Uy Tín #1</strong> 
+                        tại Việt Nam với hơn <strong style="color: #ff00ff;">1.000+</strong> khách hàng đang sử dụng và tin tưởng dịch vụ của chúng tôi mỗi ngày.
+                    </p>
+                    <p style="font-size: 1em; line-height: 1.6; color: #ddd; margin-bottom: 15px;">
+                        💎 Với tỷ lệ nổ acc VIP lên đến <strong style="color: #ffd700;">85%</strong>, hệ thống giao dịch tự động <strong style="color: #00f3ff;">24/7</strong>, 
+                        và đội ngũ hỗ trợ chuyên nghiệp, chúng tôi cam kết mang đến trải nghiệm mua sắm tuyệt vời nhất cho mọi game thủ!
+                    </p>
+                    <p style="font-size: 1.1em; line-height: 1.6; color: #ffd700; font-weight: bold; margin-top: 20px;">
+                        ⭐ "Giá Rẻ - Uy Tín - Nhanh Chóng - Bảo Mật Tuyệt Đối" ⭐
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">⭐ ƯU ĐIỂM NỔI BẬT ⭐</h2>
+                <div class="features">
+                    <div class="feature-item">
+                        <div class="feature-icon">💎</div>
+                        <div class="feature-title">TỶ LỆ NỔ CAO</div>
+                        <p class="feature-desc">Cơ hội trúng acc VIP cao nhất thị trường, mỗi lần mở đều là bất ngờ!</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-title">GIAO DỊCH TỨC THÌ</div>
+                        <p class="feature-desc">Hệ thống tự động, nhận acc ngay sau khi thanh toán thành công!</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <div class="feature-title">UY TÍN HÀNG ĐẦU</div>
+                        <p class="feature-desc">Bảo mật tuyệt đối, acc nguyên gốc, cam kết hoàn tiền nếu lỗi!</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎁</div>
+                        <div class="feature-title">QUÀ TẶNG HẤP DẪN</div>
+                        <p class="feature-desc">Tích điểm đổi quà, event liên tục với phần thưởng giá trị!</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💬</div>
+                        <div class="feature-title">HỖ TRỢ 24/7</div>
+                        <p class="feature-desc">Đội ngũ CSKH chuyên nghiệp, tư vấn nhiệt tình mọi lúc!</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💰</div>
+                        <div class="feature-title">GIÁ RẺ NHẤT</div>
+                        <p class="feature-desc">Chỉ từ 1K có thể sở hữu acc game trong mơ của bạn!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <a href="https://randomsieure.shop" target="_blank" class="cta-btn"><span>🛒 MUA NGAY</span></a>
+                <a href="https://zalo.me/0336261416" target="_blank" class="cta-btn"><span>💬 TƯ VẤN</span></a>
+            </section>
+        </div>
+
+        <footer>
+            <div class="footer-brand">RANDOMSIEURE.SHOP</div>
+            <p class="footer-desc">🎮 Website Bán Acc Game Random Uy Tín #1 Việt Nam 🎮</p>
+            <p class="founder">👨‍💻 Founder: Nguyễn Thanh Hậu</p>
+            <p class="copyright">© 2025 RANDOMSIEURE.SHOP - All Rights Reserved</p>
+        </footer>
+    </div>
+</body>
+</html>
